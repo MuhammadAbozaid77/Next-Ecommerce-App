@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { IoSearchOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 export default function SearchBar() {
   const router = useRouter();
@@ -25,7 +25,7 @@ export default function SearchBar() {
           className="flex-1 bg-transparent outline-none"
         />
         <button className="cursor-pointer" type="submit">
-          <IoSearchOutline size={20} />
+          <CiSearch size={30} />
         </button>
       </form>
     </>
