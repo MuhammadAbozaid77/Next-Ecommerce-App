@@ -1,6 +1,6 @@
 type propsType = {
   children: React.ReactNode;
-  classesName: string;
+  classesName?: string;
 };
 
 export default function Wrapper({ children, classesName }: propsType) {

@@ -4,7 +4,7 @@ import MenuNavbar from "./MenuNavbar";
 import SearchBar from "./SearchBar";
 import NavbarIcons from "./NavbarIcons";
 import Image from "next/image";
-import logo from "../../../../public/logo2.png";
+import logo from "../../../../../public/logo2.png";
 
 export default function Header() {
   return (
@@ -28,13 +28,7 @@ export default function Header() {
       <div className="md:flex hidden justify-between items-center w-full gap-8 h-full">
         <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
           <Link href={"/"}>
-            <Image
-              src={logo}
-              alt=""
-              className=""
-              width={100}
-              height={100}
-            />
+            <Image src={logo} alt="" className="" width={100} height={100} />
           </Link>
           <div className="hidden xl:flex gap-4">
             <Link href={""}> Home </Link>

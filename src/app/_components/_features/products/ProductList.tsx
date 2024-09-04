@@ -1,5 +1,4 @@
 "use client";
-
 import ProductCard from "../../_cards/ProductCard";
 
 export default function ProductList() {

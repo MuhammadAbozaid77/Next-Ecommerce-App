@@ -1,7 +1,7 @@
 "use client";
 
-import CartItemCard from "../_cards/CartItemCard";
-import CartItemCost from "../_cards/CartItemCost";
+import CartItemCard from "../../_cards/CartItemCard";
+import CartItemCost from "../../_cards/CartItemCost";
 
 export default function CartModal() {
   const cartItems = true;

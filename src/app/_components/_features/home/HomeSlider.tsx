@@ -31,7 +31,7 @@ export default function HomeSlider() {
                 <h2 className="text-xl lg:text-3xl 2xl:text-5xl">
                   {el.description}
                 </h2>
-                <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">
+                <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold px-8">
                   {el.title}
                 </h1>
                 <Link href={el.url}>
