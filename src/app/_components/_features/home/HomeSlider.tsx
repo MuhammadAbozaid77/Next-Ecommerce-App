@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { slides } from "../../lib/sliderData";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../../ui/Button";
 
 export default function HomeSlider() {
   const [current, setCurrent] = useState(0);
@@ -35,9 +36,7 @@ export default function HomeSlider() {
                   {el.title}
                 </h1>
                 <Link href={el.url}>
-                  <button className="uppercase rounded-md bg-black text-white py-3 px-4">
-                    Shop now
-                  </button>
+                  <Button>Shop now</Button>
                 </Link>
               </div>
               <div className="relative h-1/2  xl:h-full xl:w-1/2">
