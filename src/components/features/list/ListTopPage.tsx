@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "../../ui/Button";
-import womanPic from "./../../../../../public/woman.png";
+import womanPic from "./../../../../public/woman.png";
 
 export default function ListTopPage() {
   return (

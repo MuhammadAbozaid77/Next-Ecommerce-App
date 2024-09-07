@@ -1,7 +1,8 @@
 "use client";
-import Wrapper from "../_components/ui/Wrapper";
-import FilterCompo from "../_components/_features/filter/FilterCompo";
-import ListTopPage from "../_components/_features/list/ListTopPage";
+import FilterCompo from "@/components/features/filter/FilterCompo";
+import ListTopPage from "@/components/features/list/ListTopPage";
+import Wrapper from "@/components/ui/Wrapper";
+
 export default function ListPage() {
   return (
     <>
