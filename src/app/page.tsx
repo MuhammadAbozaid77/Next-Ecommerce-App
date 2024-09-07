@@ -1,8 +1,9 @@
+
+import HomeSlider from "@/components/features/home/HomeSlider";
+import CategoriesList from "@/components/features/products/CategoriesList";
+import ProductList from "@/components/features/products/ProductList";
+import Wrapper from "@/components/ui/Wrapper";
 import React from "react";
-import HomeSlider from "./_components/_features/home/HomeSlider";
-import ProductList from "./_components/_features/products/ProductList";
-import Wrapper from "./_components/ui/Wrapper";
-import CategoriesList from "./_components/_features/products/CategoriesList";
 
 export default function page() {
   return (

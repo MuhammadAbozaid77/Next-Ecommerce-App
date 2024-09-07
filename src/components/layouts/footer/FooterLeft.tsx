@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../../../public/logo2.png";
+import logo from "../../../../public/logo2.png";
 import { CiFacebook, CiInstagram, CiTwitter, CiYoutube } from "react-icons/ci";
 import { PiPinterestLogo } from "react-icons/pi";
 export default function FooterLeft() {

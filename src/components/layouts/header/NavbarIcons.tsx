@@ -34,7 +34,7 @@ export default function NavbarIcons() {
           <CiBellOn size={30} />
         </div>
         <div
-          className="relative"
+          className="relative cursor-pointer"
           onClick={() => setIsCartOpen((prev) => !prev)}
         >
           <CiShoppingCart size={30} />

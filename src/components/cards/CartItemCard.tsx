@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import pic from "../../../../public/pinterest.png";
+import pic from "../../../public/pinterest.png";
 export default function CartItemCard() {
   return (
     <>

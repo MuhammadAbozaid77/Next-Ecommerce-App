@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import pic from "../../../../public/product.png";
-import pic2 from "../../../../public/pinterest.png";
+import pic from "../../../public/product.png";
+import pic2 from "../../../public/pinterest.png";
 
 export default function ProductCard() {
   return (

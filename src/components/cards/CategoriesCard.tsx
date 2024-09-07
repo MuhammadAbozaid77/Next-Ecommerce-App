@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import pic from "../../../../public/product1.png";
+import pic from "../../../public/product1.png";
 import Image from "next/image";
 
 export default function CategoriesCard() {

@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import pic1 from "../../../../../public/discover.png";
-import pic2 from "../../../../../public/mastercard.png";
-import pic3 from "../../../../../public/paypal.png";
-import pic4 from "../../../../../public/skrill.png";
-import pic5 from "../../../../../public/visa.png";
+import pic1 from "../../../../public/discover.png";
+import pic2 from "../../../../public/mastercard.png";
+import pic3 from "../../../../public/paypal.png";
+import pic4 from "../../../../public/skrill.png";
+import pic5 from "../../../../public/visa.png";
 
 export default function FooterRight() {
   return (
@@ -21,9 +21,7 @@ export default function FooterRight() {
           placeholder="Email Address"
           className="p-4 w-3/4"
         />
-        <button className="w-1/4 bg-red-500 text-white uppercase">
-          Join
-        </button>
+        <button className="w-1/4 bg-red-500 text-white uppercase">Join</button>
       </div>
       <span className="font-semibold"> Sequre Payments </span>
       <div className="flex gap-6">

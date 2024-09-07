@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { slides } from "../../lib/sliderData";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "../../ui/Button";
+import { slides } from "@/lib/sliderData";
 
 export default function HomeSlider() {
   const [current, setCurrent] = useState(0);

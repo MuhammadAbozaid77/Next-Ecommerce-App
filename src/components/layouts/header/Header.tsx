@@ -4,7 +4,7 @@ import MenuNavbar from "./MenuNavbar";
 import SearchBar from "./SearchBar";
 import NavbarIcons from "./NavbarIcons";
 import Image from "next/image";
-import logo from "../../../../../public/logo2.png";
+import logo from "../../../../public/logo2.png";
 
 export default function Header() {
   return (

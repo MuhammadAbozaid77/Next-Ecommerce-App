@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import CategoriesCard from "../../_cards/CategoriesCard";
+import CategoriesCard from "../../cards/CategoriesCard";
 
 export default function CategoriesList() {
   return (

@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import image1 from "../../../../../public/product1.png";
-import image2 from "../../../../../public/product2.png";
-import image3 from "../../../../../public/paypal.png";
+import image1 from "../../../../public/product1.png";
+import image2 from "../../../../public/product2.png";
+import image3 from "../../../../public/paypal.png";
 import { useState } from "react";
 export default function ProductImages() {
   const images = [
