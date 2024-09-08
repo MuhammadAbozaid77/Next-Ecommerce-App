@@ -19,9 +19,9 @@ export default function AddToCart() {
     <>
       <div className="flex flex-col gap-4">
         <h4 className="font-medium"> Choose a Quantity </h4>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <div className="py-2 px-4 bg-gray-100 rounded-md flex justify-between items-center border w-32">
+        <div className="flex justify-between md:items-center sm:flex-row flex-col gap-4">
+          <div className="flex items-center gap-4 sm:flex-row flex-col">
+            <div className="py-2 px-4 bg-gray-100 rounded-md flex justify-between items-center border sm:w-32 w-full">
               <button
                 onClick={() => handelQuantity("d")}
                 className="cursor-pointer text-xl"
@@ -38,7 +38,7 @@ export default function AddToCart() {
             </div>
             <div className="text-sm">
               only
-              <span className="text-orange-500">4 Items</span>
+              <span className="text-orange-500 mx-1">4 Items</span>
               <br />
               left ! {"Dont"} {""} mis it
             </div>
