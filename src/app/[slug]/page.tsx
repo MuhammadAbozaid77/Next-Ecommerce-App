@@ -2,45 +2,75 @@ import AddToCart from "@/components/features/products/AddToCart";
 import CustomizrProducts from "@/components/features/products/CustomizrProducts";
 import ProductImages from "@/components/features/products/ProductImages";
 import Wrapper from "@/components/ui/Wrapper";
+import wixClientServer from "@/lib/wixClientServer";
+import { notFound } from "next/navigation";
 
-export default function SingelPage() {
+type propsType = {
+  params: {
+    slug: any;
+  };
+};
+export default async function SingelPage({ params }: propsType) {
+  console.log(params.slug);
+
+  const wixClient = await wixClientServer();
+  const products = await wixClient?.products
+    .queryProducts()
+    .eq("slug", [params.slug])
+    .find();
+
+  // console.log(products);
+  if (!products?.items[0]) {
+    return notFound();
+  }
+
+  const product = products?.items[0];
+  console.log(product.productOptions);
+
   return (
-    <Wrapper classesName="relative flex lg:flex-row flex-col gap-16">
+    <Wrapper classesName="relative flex lg:flex-row flex-col gap-16 mt-4">
       <div className="lg:w-1/2 w-full lg:sticky top-20 h-max">
-        <ProductImages />
+        <ProductImages images={product?.media?.items} />
       </div>
       <div className="lg:w-1/2 w-full flex flex-col gap-6">
-        <h1 className="text-4xl font-medium">Product name</h1>
-        <p className="text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-          hic!
-        </p>
+        <h1 className="text-4xl font-medium"> {product.name} </h1>
+        <p className="text-gray-500">{product.description}</p>
 
         <div className="h-[2px] bg-gray-100" />
 
         <div className="flex items-center gap-4">
-          <h3 className="text-xl text-gray-500 line-through">$ 45</h3>
-          <h2 className="font-medium text-2xl">$ 45</h2>
+          {product?.price?.price === product?.price?.discountedPrice ? (
+            <>
+              <h3 className="text-xl text-gray-500 line-through">
+                $ {product?.price?.price}
+              </h3>
+            </>
+          ) : (
+            <>
+              <h3 className="text-xl text-gray-500 line-through">
+                $ {product?.price?.price}
+              </h3>
+              <h2 className="font-medium text-2xl">
+                $ {product?.price?.discountedPrice}
+              </h2>
+            </>
+          )}
         </div>
-        <CustomizrProducts />
+        <CustomizrProducts
+          productId={product._id}
+          productVarients={product.variants}
+          productOptions={product.productOptions}
+        />
         <AddToCart />
 
         <div className="h-[2px] bg-gray-100" />
         <div>
-          <div className="mt-4">
-            <h4 className="font-medium mb-4"> Title </h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              deserunt.
-            </p>
-          </div>
-          <div className="mt-4">
-            <h4 className="font-medium mb-4"> Title </h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              deserunt.
-            </p>
-          </div>
+          {product?.additionalInfoSections?.map((section: any) => (
+            <div className="mt-4" key={section?.title}>
+              <h4 className="font-medium mb-4"> {section?.title} </h4>
+              <p>{section?.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </Wrapper>
