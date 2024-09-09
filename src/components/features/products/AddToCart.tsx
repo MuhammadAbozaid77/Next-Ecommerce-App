@@ -3,7 +3,12 @@
 import Button from "@/components/ui/Button";
 import { useState } from "react";
 
-export default function AddToCart() {
+type propsType = {
+  productDetails: any;
+};
+export default function AddToCart({ productDetails }: propsType) {
+  console.log(productDetails);
+
   const stock = 5;
   const [quantity, setQuantity] = useState(1);
   const handelQuantity = (type: "i" | "d") => {
