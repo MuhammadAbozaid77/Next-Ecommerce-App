@@ -11,7 +11,7 @@ type propsType = {
 };
 export default async function ListPage({ searchParams }: propsType) {
   const wixClient = await wixClientServer();
-  const items = await wixClient?.collections.getCollectionBySlug(
+  const items = await wixClient?.collections?.getCollectionBySlug(
     searchParams?.cat || "all-products"
   );
 

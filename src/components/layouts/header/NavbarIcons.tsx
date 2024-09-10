@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CartModal from "./CartModal";
+import useWixClient from "@/hooks/useWixClient";
 
 export default function NavbarIcons() {
   const router = useRouter();
@@ -18,10 +19,22 @@ export default function NavbarIcons() {
     }
     setIsProfileOpen((prev) => !prev);
   };
+
+  // ------------------------- Login function -------------------------
+  const wixClient = useWixClient();
+  const loginInWix = async () => {
+    const loginRequestData = wixClient.auth.generateOAuthData(
+      "http://localhost:3000"
+    );
+    localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));
+    const { authUrl } = await wixClient.auth.getAuthUrl(loginRequestData);
+    window.location.href = authUrl;
+    console.log(authUrl);
+  };
   return (
     <>
       <div className="flex justify-between items-center gap-4 relative">
-        <div onClick={handleProfile} className=" cursor-pointer">
+        <div onClick={loginInWix} className=" cursor-pointer">
           <CiUser size={30} />
         </div>
         {isProfileOpen && (
