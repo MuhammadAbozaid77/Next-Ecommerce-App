@@ -24,7 +24,7 @@ export default function FooterLeft() {
         <span className="font-semibold">muhammadabozaid77@gmail.com</span>
         <span className="font-semibold"> 01055998877 </span>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-6 ">
         <CiFacebook size={30} />
         <CiInstagram size={30} />
         <CiTwitter size={30} />

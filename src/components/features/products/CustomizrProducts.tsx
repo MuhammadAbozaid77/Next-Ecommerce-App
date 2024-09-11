@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 
 type propsType = {
@@ -16,13 +15,14 @@ export default function CustomizrProducts({
   const [selectOptions, setSelectOptions] = useState<{ [key: string]: string }>(
     {}
   );
+    
+  console.log("varients", varients);
 
   const handleOptionSelect = (optionType: string, choice: string) => {
     setSelectOptions((prev) => ({ ...prev, [optionType]: choice }));
   };
 
   const isVariantInStock = (choices: { [key: string]: string }) => {
-    console.log("hhhh");
     return varients.some((varient) => {
       const varientChoices = varient.choices;
       if (!varientChoices) return false;
@@ -33,8 +33,6 @@ export default function CustomizrProducts({
       );
     });
   };
-
-  console.log("selectOptions", selectOptions);
 
   return (
     <>

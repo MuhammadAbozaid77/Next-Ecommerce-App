@@ -2,8 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import pic from "../../../public/product.png";
-import pic2 from "../../../public/pinterest.png";
-
+import DOMPurify from "isomorphic-dompurify";
 type propsType = {
   product: any;
 };

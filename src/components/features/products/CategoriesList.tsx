@@ -4,7 +4,6 @@ import CategoriesCard from "../../cards/CategoriesCard";
 export default async function CategoriesList() {
   const wixClient = await wixClientServer();
   const { items } = await wixClient?.collections?.queryCollections().find();
-  console.log("items", items);
 
   return (
     <>

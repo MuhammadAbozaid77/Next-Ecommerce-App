@@ -4,8 +4,8 @@ import { cookies } from "next/headers";
 
 export default async function wixClientServer() {
   let refreshToken;
+  const cookiesStore = cookies();
   try {
-    const cookiesStore = cookies();
     refreshToken = JSON.parse(cookiesStore.get("refreshToken")?.value || "{}");
   } catch (error) {}
 

@@ -24,7 +24,7 @@ export default function FooterRight() {
         <button className="w-1/4 bg-red-500 text-white uppercase">Join</button>
       </div>
       <span className="font-semibold"> Sequre Payments </span>
-      <div className="flex gap-6">
+      <div className="flex gap-6 flex-wrap">
         <Image alt="" src={pic1} width={40} height={20} />
         <Image alt="" src={pic2} width={40} height={20} />
         <Image alt="" src={pic3} width={40} height={20} />
