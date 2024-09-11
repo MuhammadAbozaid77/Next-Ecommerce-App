@@ -10,7 +10,7 @@ type propsType = {
     slug: any;
   };
 };
-export default async function SingelPage({ params }: propsType) {
+export default async function SingelPage({ params }: propsType) { 
   const wixClient = await wixClientServer();
   const products = await wixClient?.products
     .queryProducts()

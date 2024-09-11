@@ -7,9 +7,9 @@ import wixClientServer from "@/lib/wixClientServer";
 import SpinnerLoading from "@/components/ui/SpinnerLoading";
 
 export default async function HomePage() {
-  // const wixClient = await wixClientServer();
-  // const { items } = await wixClient.products.queryProducts().find();
-  // console.log("items", items);
+  const wixClient = await wixClientServer();
+  const { items } = await wixClient.products.queryProducts().find();
+  console.log("items", items);
 
   return (
     <>
@@ -18,10 +18,10 @@ export default async function HomePage() {
         <Wrapper classesName="mt-24">
           <h1 className="text-2xl">Featured Products</h1>
           <Suspense fallback={<SpinnerLoading />}>
-            {/* <ProductList
-              categoryId={process.env.NEXT_WIX_CATEGORIES_ID!}
+            <ProductList
+              categoryId={process.env.NEXT_WIX_FEATURED_CATEGORIES_ID!}
               limit={4}
-            /> */}
+            />
           </Suspense>
         </Wrapper>
         <div className="mt-24">
